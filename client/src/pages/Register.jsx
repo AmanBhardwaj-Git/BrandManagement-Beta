@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock, faUnlock } from '@fortawesome/free-solid-svg-icons';
-import 'animate.css';
+
 
 const Register = () => {
   const [name, setName] = useState('');
