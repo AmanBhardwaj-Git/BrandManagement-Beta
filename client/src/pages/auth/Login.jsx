@@ -27,13 +27,29 @@ const Login = ({ setIsLoggedIn }) => {
     e.preventDefault();
     setIsLoading(true);
     const errors = validateForm();
+    
     if (Object.keys(errors).length === 0) {
       try {
-        await submitFunction();
-        toast.success('Login successful!');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        const data = await response.json();
+        
+        if (response.ok) {
+          setIsLoggedIn(true);
+          localStorage.setItem('token', data.token);
+          toast.success('Login successful!');
+          navigate('/dashboard');
+        } else {
+          throw new Error(data.message || 'Login failed');
+        }
       } catch (error) {
-        // handle error
-        toast.error(error.message || 'Login failed');
+        toast.error(error.message);
       } finally {
         setIsLoading(false);
       }
@@ -119,7 +135,7 @@ const Login = ({ setIsLoggedIn }) => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg
+              className="w-full bg-blue-500 hover:bg-blue-600 rounded-lg
                 transition-colors duration-200 shadow-lg px-4 py-2 text-sm font-medium text-white bg-gradient-to-br from-violet-500 via-pink-400 to-purple-700 
                     hover:bg-gradient-to-tr hover:from-blue-600 hover:via-pink-500 hover:to-purple-600 "
             >

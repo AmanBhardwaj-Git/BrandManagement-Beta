@@ -6,9 +6,16 @@
     "server": "cd server && npm run dev",
     "client": "cd client && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "vite build",
+    "preview": "vite preview"
+ 
+  },
+  "dependencies": {
+    "vite": "^4.5.0" 
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0", 
     "concurrently": "^8.0.1"
   }
 }
