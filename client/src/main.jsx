@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/animations.css'; // Change this line
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import ErrorBoundary from './components/ErrorBoundary';
 import App from './App';
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import './index.css';
+import './styles/animations.css';
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
