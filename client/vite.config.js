@@ -5,22 +5,11 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true,
-      rollupOptions: {
-      external: ['framer-motion'],
-    }
+    sourcemap: true
   },
-  optimizeDeps: {
-    include: ['framer-motion']
-  },
-  server: {
-    port: 5173,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        secure: false
-      }
+  resolve: {
+    alias: {
+      'react-icons': 'react-icons'
     }
   }
 })
