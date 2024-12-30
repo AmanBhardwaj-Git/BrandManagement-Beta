@@ -188,7 +188,8 @@ const Register = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg
-                  transition-colors duration-200"
+                  transition-colors duration-200 px-4 py-2 text-sm font-medium text-white bg-gradient-to-br from-violet-500 via-pink-400 to-purple-700 
+                    hover:bg-gradient-to-tr hover:from-blue-600 hover:via-pink-500 hover:to-purple-600 "
               >
                 Continue with Email Verification
               </button>
@@ -239,7 +240,7 @@ const Register = () => {
           <div className="mt-6 text-center">
             <p className="text-blue-200">
               Already have an account?{' '}
-              <Link to="/login" className="text-blue-300 hover:text-blue-200 font-medium">
+              <Link to="/login" className="text-pink-300 hover:text-blue-200 font-medium">
                 Sign in
               </Link>
             </p>

@@ -1,0 +1,47 @@
+/* src/index.css */
+@import 'animate.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Include Animate.css for animations */
+
+/* Custom styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0A0A0F;  /* Dark background */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #151520, #1A1A2F, #0A0A0F);
+}

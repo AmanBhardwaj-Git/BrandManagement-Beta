@@ -217,10 +217,10 @@ const About = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent 
                           opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </motion.div>
-                      <h3 className="text-sm sm:text-base font-medium text-white truncate max-w-[90%]">
+                      <h3 className="text-sm sm:text-[16px] font-medium text-white truncate max-w-[90%]">
                         {member.name}
                       </h3>
-                      <p className="text-xs text-blue-200/80 hidden sm:block truncate max-w-[90%]">
+                      <p className="text-sm text-blue-200/80 hidden sm:block truncate max-w-[90%]">
                         {member.role}
                       </p>
                     </motion.div>
@@ -233,7 +233,7 @@ const About = () => {
                       flex flex-col items-center justify-between">
                       {/* Quote - Hidden on mobile */}
                       <div className="hidden sm:flex flex-1 items-center justify-center px-2">
-                        <p className="text-white/80 italic text-xs sm:text-sm leading-relaxed line-clamp-4">
+                        <p className="text-white/80 italic text-sm sm:text-sm leading-relaxed line-clamp-4">
                           {member.quote || 'Innovation is our driving force.'}
                         </p>
                       </div>

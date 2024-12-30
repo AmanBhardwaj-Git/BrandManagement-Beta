@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-bl from-gray-950  via-violet-950  to-blue-950 text-blue-300">
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20 gap-5" >
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-yellow-100 text-lg font-bold font-display">Brand Management Tool</h3>
@@ -17,35 +17,10 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-yellow-100 text-lg font-bold font-display">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/dashboard" className="hover:text-white transition-colors font-light">
-                  Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects" className="hover:text-white transition-colors font-light">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link to="/resources" className="hover:text-white transition-colors font-light">
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link to="/support" className="hover:text-white transition-colors font-light">
-                  Support
-                </Link>
-              </li>
-            </ul>
-          </div>
+       
 
           {/* Contact Info */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             <h4 className="text-yellow-100 text-lg font-bold font-display">Contact Us</h4>
             <ul className="space-y-2 text-sm font-light">
               <li className="flex items-center gap-2">
