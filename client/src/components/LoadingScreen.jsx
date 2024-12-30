@@ -49,7 +49,7 @@ const LoadingScreen = () => {
       >
         {/* Brand name with gradient */}
         <motion.h1 className="text-6xl font-bold mb-6 relative">
-          {'BrandTool'.split('').map((letter, index) => (
+          {'BrandManagement-Tool'.split('').map((letter, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: 40 }}
