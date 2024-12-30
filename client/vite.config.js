@@ -5,7 +5,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+      rollupOptions: {
+      external: ['framer-motion'],
+    }
+  },
+  optimizeDeps: {
+    include: ['framer-motion']
   },
   server: {
     port: 5173,

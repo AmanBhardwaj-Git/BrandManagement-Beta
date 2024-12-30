@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import LoadingScreen from './components/LoadingScreen';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence , motion} from 'framer-motion';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
