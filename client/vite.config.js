@@ -11,5 +11,14 @@ export default defineConfig({
     alias: {
       'react-icons': 'react-icons'
     }
+  },  optimizeDeps: {
+    include: ['animate.css']
+  },
+  css: {
+    preprocessorOptions: {
+      css: {
+        charset: false
+      }
+    }
   }
 })
