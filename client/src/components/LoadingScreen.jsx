@@ -48,18 +48,18 @@ const LoadingScreen = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         {/* Brand name with gradient */}
-        <motion.h1 className="text-6xl font-bold mb-6 relative">
-          {'BrandManagement-Tool'.split('').map((letter, index) => (
+        <motion.h1 className="text-2xl lg:text-6xl font-bold mb-6 relative">
+          {'Brand Management'.split('').map((letter, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.9,
                 delay: index * 0.1,
                 ease: "easeOut"
               }}
-              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400"
+              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400"
             >
               {letter}
             </motion.span>
